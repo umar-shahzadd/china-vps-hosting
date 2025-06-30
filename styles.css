@@ -14,14 +14,14 @@ body {
   background-color: #ffffff;
 }
 
-/* Color Variables */
+/* Ocean Breeze Color Variables */
 :root {
-  --primary: #1e1e1e;
-  --secondary: #f5f5f5;
-  --accent: #ffd700;
-  --background: #ffffff;
+  --primary: #0a369d; /* Deep Blue */
+  --secondary: #4472ca; /* Aqua */
+  --accent: #93b5c6; /* Seafoam */
+  --background: #ffffff; /* White */
   --text: #333333;
-  --text-muted: #737373;
+  --text-muted: #6b7280;
   --border: #e5e7eb;
   --shadow: rgba(0, 0, 0, 0.1);
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .btn-cta:hover {
-  background: #e6c200;
+  background: #7da3b5;
 }
 
 .mobile-menu-btn {
@@ -139,11 +139,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
-    to right bottom,
-    var(--secondary),
-    var(--background)
-  );
+  background: linear-gradient(to right bottom, #f0f4f8, var(--background));
   padding: 80px 0;
 }
 
@@ -159,6 +155,7 @@ body {
   font-weight: bold;
   margin-bottom: 24px;
   line-height: 1.1;
+  color: var(--primary);
 }
 
 .text-accent {
@@ -179,8 +176,8 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: var(--primary);
+  background: var(--primary);
+  color: white;
   padding: 16px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -191,12 +188,12 @@ body {
 }
 
 .btn-primary:hover {
-  background: #e6c200;
+  background: #082e85;
 }
 
 .btn-secondary {
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
   padding: 16px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -208,7 +205,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: var(--primary);
+  background: var(--secondary);
   color: white;
 }
 
@@ -216,10 +213,11 @@ body {
   background: white;
   border-radius: 12px;
   box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    0 20px 25px -5px rgba(10, 54, 157, 0.1),
+    0 8px 10px -6px rgba(10, 54, 157, 0.1);
   padding: 32px;
   display: inline-block;
+  border: 1px solid rgba(147, 181, 198, 0.2);
 }
 
 .stats-grid {
@@ -229,16 +227,17 @@ body {
 }
 
 .stat-item {
-  background: var(--secondary);
+  background: linear-gradient(135deg, #f0f4f8, #e8f2f6);
   padding: 16px;
   border-radius: 8px;
   text-align: center;
+  border: 1px solid rgba(147, 181, 198, 0.3);
 }
 
 .stat-value {
   font-size: 24px;
   font-weight: bold;
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .stat-label {
@@ -256,7 +255,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 16px;
-  color: var(--text);
+  color: var(--primary);
 }
 
 .section-description {
@@ -282,15 +281,16 @@ body {
   text-align: center;
   padding: 24px;
   background: white;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(147, 181, 198, 0.3);
   border-radius: 8px;
-  transition: box-shadow 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .feature-card:hover {
   box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    0 10px 15px -3px rgba(10, 54, 157, 0.1),
+    0 4px 6px -2px rgba(10, 54, 157, 0.05);
+  border-color: var(--accent);
 }
 
 .feature-icon {
@@ -299,7 +299,11 @@ body {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: rgba(255, 215, 0, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(147, 181, 198, 0.1),
+    rgba(68, 114, 202, 0.1)
+  );
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -307,7 +311,7 @@ body {
 .icon {
   width: 32px;
   height: 32px;
-  color: var(--accent);
+  color: var(--secondary);
   stroke-width: 2;
 }
 
@@ -315,7 +319,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: var(--text);
+  color: var(--primary);
 }
 
 .feature-description {
@@ -326,7 +330,7 @@ body {
 /* Benefits Section */
 .benefits {
   padding: 64px 0;
-  background: var(--secondary);
+  background: linear-gradient(135deg, #f0f4f8, #e8f2f6);
 }
 
 .benefits-grid {
@@ -340,7 +344,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 24px;
-  color: var(--text);
+  color: var(--primary);
 }
 
 .benefits-description {
@@ -383,7 +387,7 @@ body {
 
 .benefit-title {
   font-weight: 600;
-  color: var(--text);
+  color: var(--primary);
   margin-bottom: 4px;
 }
 
@@ -392,7 +396,7 @@ body {
 }
 
 .link-accent {
-  color: var(--accent);
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -405,10 +409,11 @@ body {
   background: linear-gradient(
     to right bottom,
     var(--primary),
-    rgba(30, 30, 30, 0.8)
+    var(--secondary)
   );
   border-radius: 8px;
   overflow: hidden;
+  border: 2px solid var(--accent);
 }
 
 .video-caption {
@@ -421,7 +426,7 @@ body {
 /* Pricing Section */
 .pricing {
   padding: 64px 0;
-  background: var(--secondary);
+  background: linear-gradient(135deg, #f0f4f8, #e8f2f6);
 }
 
 .pricing-grid {
@@ -432,15 +437,20 @@ body {
 
 .pricing-card {
   background: white;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(147, 181, 198, 0.3);
   border-radius: 8px;
   padding: 32px;
   position: relative;
+  transition: all 0.15s ease;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(10, 54, 157, 0.1);
 }
 
 .pricing-card.popular {
   border: 2px solid var(--accent);
-  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(147, 181, 198, 0.2);
 }
 
 .popular-badge {
@@ -464,7 +474,7 @@ body {
 .plan-name {
   font-size: 24px;
   font-weight: bold;
-  color: var(--text);
+  color: var(--primary);
   margin-bottom: 8px;
 }
 
@@ -477,7 +487,7 @@ body {
 .price {
   font-size: 36px;
   font-weight: bold;
-  color: var(--text);
+  color: var(--primary);
 }
 
 .period {
@@ -499,7 +509,7 @@ body {
 .check-icon {
   width: 20px;
   height: 20px;
-  color: var(--accent);
+  color: var(--secondary);
   margin-right: 12px;
   flex-shrink: 0;
 }
@@ -521,7 +531,7 @@ body {
 }
 
 .btn-plan:hover {
-  background: rgba(30, 30, 30, 0.9);
+  background: #082e85;
 }
 
 .btn-plan-popular {
@@ -537,7 +547,7 @@ body {
 }
 
 .btn-plan-popular:hover {
-  background: #e6c200;
+  background: #7da3b5;
 }
 
 .pricing-footer {
@@ -552,7 +562,7 @@ body {
 
 .btn-contact {
   display: inline-block;
-  background: var(--primary);
+  background: var(--secondary);
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -562,7 +572,7 @@ body {
 }
 
 .btn-contact:hover {
-  background: rgba(30, 30, 30, 0.9);
+  background: #3a5fb8;
 }
 
 /* FAQ Section */
@@ -577,10 +587,15 @@ body {
 }
 
 .faq-item {
-  border: 1px solid var(--border);
+  border: 1px solid rgba(147, 181, 198, 0.3);
   border-radius: 8px;
   background: white;
   margin-bottom: 16px;
+  transition: all 0.15s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--accent);
 }
 
 .faq-question {
@@ -597,20 +612,20 @@ body {
 }
 
 .faq-question:hover {
-  background: rgba(245, 245, 245, 0.5);
+  background: rgba(147, 181, 198, 0.05);
 }
 
 .faq-title {
   font-size: 18px;
   font-weight: 600;
-  color: var(--text);
+  color: var(--primary);
   padding-right: 16px;
 }
 
 .faq-icon {
   width: 20px;
   height: 20px;
-  color: var(--text-muted);
+  color: var(--secondary);
   flex-shrink: 0;
   transition: transform 0.15s ease;
 }
@@ -653,13 +668,13 @@ body {
 }
 
 .btn-support:hover {
-  background: #e6c200;
+  background: #7da3b5;
 }
 
 /* CTA Section */
 .cta {
   padding: 64px 0;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
 }
 
@@ -678,7 +693,7 @@ body {
 .cta-description {
   font-size: 20px;
   margin-bottom: 32px;
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .cta-buttons {
@@ -700,7 +715,7 @@ body {
 }
 
 .btn-cta-primary:hover {
-  background: #e6c200;
+  background: #7da3b5;
 }
 
 .btn-cta-secondary {
@@ -744,7 +759,7 @@ body {
 }
 
 .footer-description {
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 16px;
   line-height: 1.6;
 }
@@ -754,7 +769,7 @@ body {
 }
 
 .contact-item {
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 8px;
 }
 
@@ -773,7 +788,7 @@ body {
 }
 
 .footer-link {
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -783,14 +798,14 @@ body {
 }
 
 .footer-bottom {
-  border-top: 1px solid #374151;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 32px;
   padding-top: 32px;
   text-align: center;
 }
 
 .footer-copyright {
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive Design */

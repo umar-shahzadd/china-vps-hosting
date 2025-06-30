@@ -14,14 +14,14 @@ body {
   background-color: #ffffff;
 }
 
-/* Ocean Breeze Color Variables */
+/* Color Variables */
 :root {
-  --primary: #0a369d; /* Deep Blue */
-  --secondary: #4472ca; /* Aqua */
-  --accent: #93b5c6; /* Seafoam */
-  --background: #ffffff; /* White */
+  --primary: #1e1e1e;
+  --secondary: #f5f5f5;
+  --accent: #ffd700;
+  --background: #ffffff;
   --text: #333333;
-  --text-muted: #6b7280;
+  --text-muted: #737373;
   --border: #e5e7eb;
   --shadow: rgba(0, 0, 0, 0.1);
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .btn-cta:hover {
-  background: #7da3b5;
+  background: #e6c200;
 }
 
 .mobile-menu-btn {
@@ -139,7 +139,11 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right bottom, #f0f4f8, var(--background));
+  background: linear-gradient(
+    to right bottom,
+    var(--secondary),
+    var(--background)
+  );
   padding: 80px 0;
 }
 
@@ -155,7 +159,6 @@ body {
   font-weight: bold;
   margin-bottom: 24px;
   line-height: 1.1;
-  color: var(--primary);
 }
 
 .text-accent {
@@ -176,8 +179,8 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary);
-  color: white;
+  background: var(--accent);
+  color: var(--primary);
   padding: 16px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -188,12 +191,12 @@ body {
 }
 
 .btn-primary:hover {
-  background: #082e85;
+  background: #e6c200;
 }
 
 .btn-secondary {
-  border: 2px solid var(--secondary);
-  color: var(--secondary);
+  border: 2px solid var(--primary);
+  color: var(--primary);
   padding: 16px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -205,7 +208,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: var(--secondary);
+  background: var(--primary);
   color: white;
 }
 
@@ -213,11 +216,10 @@ body {
   background: white;
   border-radius: 12px;
   box-shadow:
-    0 20px 25px -5px rgba(10, 54, 157, 0.1),
-    0 8px 10px -6px rgba(10, 54, 157, 0.1);
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
   padding: 32px;
   display: inline-block;
-  border: 1px solid rgba(147, 181, 198, 0.2);
 }
 
 .stats-grid {
@@ -227,17 +229,16 @@ body {
 }
 
 .stat-item {
-  background: linear-gradient(135deg, #f0f4f8, #e8f2f6);
+  background: var(--secondary);
   padding: 16px;
   border-radius: 8px;
   text-align: center;
-  border: 1px solid rgba(147, 181, 198, 0.3);
 }
 
 .stat-value {
   font-size: 24px;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .stat-label {
@@ -255,7 +256,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 16px;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .section-description {
@@ -281,16 +282,15 @@ body {
   text-align: center;
   padding: 24px;
   background: white;
-  border: 1px solid rgba(147, 181, 198, 0.3);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  transition: all 0.15s ease;
+  transition: box-shadow 0.15s ease;
 }
 
 .feature-card:hover {
   box-shadow:
-    0 10px 15px -3px rgba(10, 54, 157, 0.1),
-    0 4px 6px -2px rgba(10, 54, 157, 0.05);
-  border-color: var(--accent);
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .feature-icon {
@@ -299,11 +299,7 @@ body {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: linear-gradient(
-    135deg,
-    rgba(147, 181, 198, 0.1),
-    rgba(68, 114, 202, 0.1)
-  );
+  background: rgba(255, 215, 0, 0.1);
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -311,7 +307,7 @@ body {
 .icon {
   width: 32px;
   height: 32px;
-  color: var(--secondary);
+  color: var(--accent);
   stroke-width: 2;
 }
 
@@ -319,7 +315,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .feature-description {
@@ -330,7 +326,7 @@ body {
 /* Benefits Section */
 .benefits {
   padding: 64px 0;
-  background: linear-gradient(135deg, #f0f4f8, #e8f2f6);
+  background: var(--secondary);
 }
 
 .benefits-grid {
@@ -344,7 +340,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 24px;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .benefits-description {
@@ -387,7 +383,7 @@ body {
 
 .benefit-title {
   font-weight: 600;
-  color: var(--primary);
+  color: var(--text);
   margin-bottom: 4px;
 }
 
@@ -396,7 +392,7 @@ body {
 }
 
 .link-accent {
-  color: var(--secondary);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -409,11 +405,10 @@ body {
   background: linear-gradient(
     to right bottom,
     var(--primary),
-    var(--secondary)
+    rgba(30, 30, 30, 0.8)
   );
   border-radius: 8px;
   overflow: hidden;
-  border: 2px solid var(--accent);
 }
 
 .video-caption {
@@ -426,7 +421,7 @@ body {
 /* Pricing Section */
 .pricing {
   padding: 64px 0;
-  background: linear-gradient(135deg, #f0f4f8, #e8f2f6);
+  background: var(--secondary);
 }
 
 .pricing-grid {
@@ -437,20 +432,15 @@ body {
 
 .pricing-card {
   background: white;
-  border: 1px solid rgba(147, 181, 198, 0.3);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 32px;
   position: relative;
-  transition: all 0.15s ease;
-}
-
-.pricing-card:hover {
-  box-shadow: 0 10px 25px -5px rgba(10, 54, 157, 0.1);
 }
 
 .pricing-card.popular {
   border: 2px solid var(--accent);
-  box-shadow: 0 0 0 4px rgba(147, 181, 198, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
 }
 
 .popular-badge {
@@ -474,7 +464,7 @@ body {
 .plan-name {
   font-size: 24px;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--text);
   margin-bottom: 8px;
 }
 
@@ -487,7 +477,7 @@ body {
 .price {
   font-size: 36px;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .period {
@@ -509,7 +499,7 @@ body {
 .check-icon {
   width: 20px;
   height: 20px;
-  color: var(--secondary);
+  color: var(--accent);
   margin-right: 12px;
   flex-shrink: 0;
 }
@@ -531,7 +521,7 @@ body {
 }
 
 .btn-plan:hover {
-  background: #082e85;
+  background: rgba(30, 30, 30, 0.9);
 }
 
 .btn-plan-popular {
@@ -547,7 +537,7 @@ body {
 }
 
 .btn-plan-popular:hover {
-  background: #7da3b5;
+  background: #e6c200;
 }
 
 .pricing-footer {
@@ -562,7 +552,7 @@ body {
 
 .btn-contact {
   display: inline-block;
-  background: var(--secondary);
+  background: var(--primary);
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -572,7 +562,7 @@ body {
 }
 
 .btn-contact:hover {
-  background: #3a5fb8;
+  background: rgba(30, 30, 30, 0.9);
 }
 
 /* FAQ Section */
@@ -587,15 +577,10 @@ body {
 }
 
 .faq-item {
-  border: 1px solid rgba(147, 181, 198, 0.3);
+  border: 1px solid var(--border);
   border-radius: 8px;
   background: white;
   margin-bottom: 16px;
-  transition: all 0.15s ease;
-}
-
-.faq-item:hover {
-  border-color: var(--accent);
 }
 
 .faq-question {
@@ -612,20 +597,20 @@ body {
 }
 
 .faq-question:hover {
-  background: rgba(147, 181, 198, 0.05);
+  background: rgba(245, 245, 245, 0.5);
 }
 
 .faq-title {
   font-size: 18px;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--text);
   padding-right: 16px;
 }
 
 .faq-icon {
   width: 20px;
   height: 20px;
-  color: var(--secondary);
+  color: var(--text-muted);
   flex-shrink: 0;
   transition: transform 0.15s ease;
 }
@@ -668,13 +653,13 @@ body {
 }
 
 .btn-support:hover {
-  background: #7da3b5;
+  background: #e6c200;
 }
 
 /* CTA Section */
 .cta {
   padding: 64px 0;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: var(--primary);
   color: white;
 }
 
@@ -693,7 +678,7 @@ body {
 .cta-description {
   font-size: 20px;
   margin-bottom: 32px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #d1d5db;
 }
 
 .cta-buttons {
@@ -715,7 +700,7 @@ body {
 }
 
 .btn-cta-primary:hover {
-  background: #7da3b5;
+  background: #e6c200;
 }
 
 .btn-cta-secondary {
@@ -759,7 +744,7 @@ body {
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: #d1d5db;
   margin-bottom: 16px;
   line-height: 1.6;
 }
@@ -769,7 +754,7 @@ body {
 }
 
 .contact-item {
-  color: rgba(255, 255, 255, 0.8);
+  color: #d1d5db;
   margin-bottom: 8px;
 }
 
@@ -788,7 +773,7 @@ body {
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: #d1d5db;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -798,14 +783,14 @@ body {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid #374151;
   margin-top: 32px;
   padding-top: 32px;
   text-align: center;
 }
 
 .footer-copyright {
-  color: rgba(255, 255, 255, 0.8);
+  color: #d1d5db;
 }
 
 /* Responsive Design */
